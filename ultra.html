@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart UI</title>
+    <link rel="stylesheet" href="dao.css">
+</head>
+<body>
+
+<div class="cart-box">
+
+    <!-- ONLY ITEM (iPhone 17 Pro) -->
+    <div class="item" id="item0">
+        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MYPD3ref_VW_34FR+watch-case-49-titanium-black-ultra3_VW_34FR+watch-face-49-ocean-ultra3_VW_34FR_GEO_PH?wid=752&hei=720&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=VEREVGFsQzRDQXZXemdUckh4dmo3M2pDV2hhem5qNnpDenFtKzI1OXdzWjRaeVR4RW9XWXhWVHRHeXZEa3AwcDZpTzZlS09Bd0x4ZHpLanhpRFM3bEpiVmVXUVJPYnV1S0FZc3FMLzd3SDRjOUJ3L2xvMzd3UE9qbmZuSVYvRTJ6UHI4L0pSeGJRdVBSL3JlaHdLaUxVaVFLdTFzYmxUaFFDNm1xa01lM2lVOFBQS2x2VWhqZG9GTVZlWWZiMG9CMEFOOTk2REk1TmtlVWE1WWZZSVQzZHlQais3RytGWWJ0Nm83bWZDUVNRRQ">
+        <div class="item-info">
+            <div class="item-title">Apple Watch Ultra</div>
+            <div class="item-price">From ₱54,990</div>
+            <div class="qty-box">
+                <button class="qty-btn" onclick="changeQty(0,'minus')">−</button>
+                <div class="qty-number" id="qty0">1</div>
+                <button class="qty-btn" onclick="changeQty(0,'plus')">+</button>
+            </div>
+        </div>
+        <div class="remove-btn" onclick="removeItem(0)">✕</div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+        <div><span>Subtotal:</span> <span id="subtotal">₱54,990</span></div>
+        <div><span>Tax:</span> <span>₱0</span></div>
+        <div><strong>Total:</strong> <strong id="total">₱54,990</strong></div>
+    </div>
+
+    <button class="checkout">Check Out</button>
+</div>
+
+<script src="dao.js"></script>
+<script>
+    // In case dao.js doesn’t have this event, we add it here:
+    document.getElementById("checkoutBtn").addEventListener("click", function () {
+        alert("Successfully Check Out");
+    });
+</script>
+</body>
+</html>
+
