@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart UI</title>
+    <link rel="stylesheet" href="dao.css">
+</head>
+<body>
+
+<div class="cart-box">
+
+    <!-- ONLY ITEM (iPhone 17 Pro) -->
+    <div class="item" id="item0">
+        <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24748328/236706_Mac_Pro_AKrales_0094.jpg?quality=90&strip=all&crop=16.666666666667,0,66.666666666667,1003">
+        <div class="item-info">
+            <div class="item-title">mac Pro</div>
+            <div class="item-price">From ₱449,990</div>
+            <div class="qty-box">
+                <button class="qty-btn" onclick="changeQty(0,'minus')">−</button>
+                <div class="qty-number" id="qty0">1</div>
+                <button class="qty-btn" onclick="changeQty(0,'plus')">+</button>
+            </div>
+        </div>
+        <div class="remove-btn" onclick="removeItem(0)">✕</div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+        <div><span>Subtotal:</span> <span id="subtotal">₱449,990</span></div>
+        <div><span>Tax:</span> <span>₱0</span></div>
+        <div><strong>Total:</strong> <strong id="total">₱449,990</strong></div>
+    </div>
+
+    <button class="checkout">Check Out</button>
+</div>
+
+<script src="dao.js"></script>
+<script>
+    // In case dao.js doesn’t have this event, we add it here:
+    document.getElementById("checkoutBtn").addEventListener("click", function () {
+        alert("Successfully Check Out");
+    });
+</script>
+</body>
+</html>
+
