@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart UI</title>
+    <link rel="stylesheet" href="dao.css">
+</head>
+<body>
+
+<div class="cart-box">
+
+    <!-- ONLY ITEM (iPhone 17 Pro) -->
+    <div class="item" id="item0">
+        <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXJD3_VW_34FR+watch-case-46-titanium-silver-cell-hermes11s_VW_34FR+watch-face-46-toileh-ecrugold-hermes11s_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=Y2wzMmM2Q2pDYlhvenhPamx6S1hIKzVxVzV1SWdyWkx1L3pvamdUVHAzVldTd2V0YWlzUWFWa2EzSi9ZNk5ZZHB0bUNEN0pFTDgrbG1Hdk1GZld2elNndmdtajNLc0tYa29tMjdSbHJFVElXMTdHWVdacnFaSjl3RUMzY1RhUStwdG1DRDdKRUw4K2xtR3ZNRmZXdnpWQ3RPTys0V0JDL1E3U0xPSTVXcjNNRTJsZmRCaDlhOEFTanNHbHplV0g1b3oxR01aTmJlbkpDTGo3ZW0xM1dhM0Q3eGlmV3hUZGx0eFdPVWJtVGtqYw">
+        <div class="item-info">
+            <div class="item-title">apple watch hermès</div>
+            <div class="item-price">From From ₱83,390</div>
+            <div class="qty-box">
+                <button class="qty-btn" onclick="changeQty(0,'minus')">−</button>
+                <div class="qty-number" id="qty0">1</div>
+                <button class="qty-btn" onclick="changeQty(0,'plus')">+</button>
+            </div>
+        </div>
+        <div class="remove-btn" onclick="removeItem(0)">✕</div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+        <div><span>Subtotal:</span> <span id="subtotal">₱83,390</span></div>
+        <div><span>Tax:</span> <span>₱0</span></div>
+        <div><strong>Total:</strong> <strong id="total">₱83,390</strong></div>
+    </div>
+
+    <button class="checkout">Check Out</button>
+</div>
+
+<script src="dao.js"></script>
+<script>
+    // In case dao.js doesn’t have this event, we add it here:
+    document.getElementById("checkoutBtn").addEventListener("click", function () {
+        alert("Successfully Check Out");
+    });
+</script>
+</body>
+</html>
+
