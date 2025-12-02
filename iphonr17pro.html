@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart UI</title>
+    <link rel="stylesheet" href="dao.css">
+</head>
+<script>
+function checkoutSuccess() {
+    alert("Successfully Check Out");
+    window.location.href = "applewatch.html";  // ← your home page file
+}
+</script>
+
+<body>
+
+<div class="cart-box">
+
+    <!-- ONLY ITEM (iPhone 17 Pro) -->
+    <div class="item" id="item0">
+        <img src="https://powermaccenter.com/cdn/shop/files/IMG-18066190_m_jpeg_1_ff3e798c-0931-46c1-b8e1-12e6fac4426e.jpg?v=1757470944">
+        <div class="item-info">
+            <div class="item-title">Iphone 17 pro </div>
+            <div class="item-price">From ₱79,990.00</div>
+            <div class="qty-box">
+                <button class="qty-btn" onclick="changeQty(0,'minus')">−</button>
+                <div class="qty-number" id="qty0">1</div>
+                <button class="qty-btn" onclick="changeQty(0,'plus')">+</button>
+            </div>
+        </div>
+        <div class="remove-btn" onclick="removeItem(0)">✕</div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+        <div><span>Subtotal:</span> <span id="subtotal">₱112,990</span></div>
+        <div><span>Tax:</span> <span>₱0</span></div>
+        <div><strong>Total:</strong> <strong id="total">₱112,990</strong></div>
+    </div>
+
+    <button class="checkout" id="checkoutBtn">Check Out</button>
+</div>
+
+<script src="dao.js"></script>
+<script>
+    // In case dao.js doesn’t have this event, we add it here:
+    document.getElementById("checkoutBtn").addEventListener("click", function () {
+        alert("Successfully Check Out");
+    });
+</script>
+
+</body>
+</html>
